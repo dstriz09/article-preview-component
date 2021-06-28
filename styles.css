@@ -1,0 +1,236 @@
+/*------------------------------*/
+/*---------Resets---------*/
+/*------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------*/
+/*---------Main---------*/
+/*------------------------------*/
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  margin: 0 2rem;
+  max-width: 73rem;
+  display: grid;
+  grid-template-columns: 39% 61%;
+  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  background-image: url(./images/drawers.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem 0 0 1rem;
+}
+
+/*------------------------------*/
+/*---------Content---------*/
+/*------------------------------*/
+.content {
+  padding: 3rem 4rem;
+  background-color: #fff;
+  color: hsl(214, 17%, 51%);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.content > p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  margin-bottom: 1.9rem;
+  color: hsl(212, 23%, 69%);
+}
+
+.article-details {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.author {
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 1.3rem;
+  color: hsl(214, 17%, 51%);
+  font-weight: 700;
+}
+
+.date {
+  margin-top: 0.4rem;
+  color: hsl(212, 23%, 69%);
+  font-size: 1.3rem;
+}
+
+/*------------------------------*/
+/*---------Share---------*/
+/*------------------------------*/
+
+.button {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-share {
+  font-size: 1.7rem;
+}
+
+.social i {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.social {
+  display: flex;
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  top: -8rem;
+  cursor: initial;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.social > p {
+  font-size: 1.3rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: hsl(214, 17%, 51%);
+  padding-left: 1rem;
+  user-select: none;
+}
+
+.social > a {
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.pointer {
+  position: absolute;
+  border: 1rem solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  top: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  background-color: hsl(214, 17%, 51%);
+  transition-property: background-color;
+  transition-duration: 200ms;
+}
+
+.active > i {
+  color: white;
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+.desktop-hide {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    min-width: 30rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image {
+    border-radius: 0;
+    width: 100%;
+    height: 25rem;
+  }
+
+  .content {
+    padding-bottom: 1rem;
+  }
+
+  .content > h3 {
+    font-size: 1.6rem;
+  }
+
+  .content > p {
+    margin-bottom: 4rem;
+  }
+
+  .button {
+    position: initial;
+  }
+
+  .social {
+    border-radius: 0;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+  }
+
+  .pointer {
+    display: none;
+  }
+
+  .active {
+    display: flex;
+    margin-left: 12rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
